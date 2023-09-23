@@ -1,0 +1,50 @@
+*Lab task 1*
+
+PC1 and PC3
+ipconfig /all 
+ipconfig /all
+ping 10.10.1.18
+ping 10.10.1.98
+
+tracert 10.10.1.18
+tracert 10.10.1.98
+
+R1
+enable 
+show ip interface brief 
+show ip route 
+
+R3
+enable 
+show ip interface brief 
+show ip route 
+
+R2
+enable 
+show ip interface brief
+conf t
+interface s0/0/0 
+ip address 10.10.1.5 255.255.255.252
+no shutdown
+
+PC1 and PC3
+ping 10.10.1.18
+ping 10.10.1.98
+
+PC2 and PC4
+ipv6config /all
+ipv6config /all
+
+ping 2001:DB8:1:4::2
+ping 2001:DB8:1:1::2
+
+tracert 2001:DB8:1:4::2
+tracert 2001:DB8:1:1::2
+
+R3
+enable 
+show ipv6 interface brief 
+
+PC2 and PC4
+ping 2001:DB8:1:4::2
+ping 2001:DB8:1:1::2
